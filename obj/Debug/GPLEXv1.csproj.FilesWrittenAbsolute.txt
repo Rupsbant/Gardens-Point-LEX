@@ -1,0 +1,2 @@
+/home/kommusoft/Projects/IdpGie/IdpGie/gplex/obj/Debug/QUT.Gplex.IncludeResources.Content.resources
+/home/kommusoft/Projects/IdpGie/IdpGie/gplex/obj/Debug/QUT.Gplex.Properties.Resources.resources
