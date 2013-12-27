@@ -15,14 +15,17 @@
     <OldToolsVersion>3.5</OldToolsVersion>
     <ApplicationRevision>0</ApplicationRevision>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS RANGELIST_DIAGNOSTICS</DefineConstants>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,6 +33,7 @@
     <OutputPath>bin\debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,7 +52,6 @@
     <Compile Include="GPLEX\Minimizer.cs" />
     <Compile Include="GPLEX\NFSA.cs" />
     <Compile Include="GPLEX\ParseHelper.cs" />
-    <Compile Include="GPLEX\parser.cs" />
     <Compile Include="GPLEX\Partitions.cs" />
     <Compile Include="GPLEX\program.cs" />
     <Compile Include="GPLEX\ScanHelper.cs" />
@@ -67,6 +70,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="ShiftReduceParser\ShiftReduceParserCode.cs" />
+    <Compile Include="GPLEX\Parser.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="IncludeResources\Content.resx">
