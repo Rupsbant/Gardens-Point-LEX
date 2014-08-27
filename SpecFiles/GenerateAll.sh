@@ -1,16 +1,14 @@
-mcs GenerateResource.cs
+BOOTSTRAP=../bootstrap
+
+dmcs -r:System.Windows.Forms GenerateResource.cs
 mono GenerateResource.exe
 mv Content.resx ../IncludeResources
 rm GenerateResource.exe
 
-gppg /gplex /nolines gplex.y
-mv parser.cs ../GPLEX
+mono $BOOTSTRAP/gppg.exe /gplex /nolines gplex.y
+mv Parser.cs ../GPLEX
 
-gplex gplex.lex
+mono $BOOTSTRAP/gplex.exe gplex.lex
 mv Scanner.cs ../GPLEX
-
-if not exist GplexBuffers.cs goto finish
 mv GplexBuffers.cs ../GPLEX
 
-:finish
-REM Ended
