@@ -1,0 +1,6 @@
+#Generated files.
+GPLEX/Parser.cs
+GPLEX/Scanner.cs
+SpecFiles/gplex.lst
+IncludeResources/Content.resources
+Properties/Resources.resources
